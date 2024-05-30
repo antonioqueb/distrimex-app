@@ -23,23 +23,29 @@ export default function Page() {
       alert("Por favor, selecciona un archivo primero");
       return;
     }
-
+  
     const formData = new FormData();
     formData.append("file", file);
-
+  
     try {
       const response = await fetch("/api/upload", {
         method: "POST",
         body: formData,
       });
+  
+      if (!response.ok) {
+        throw new Error(`Error en la respuesta del servidor: ${response.statusText}`);
+      }
+  
       const result = await response.json();
       console.log(result);
       alert("Archivo cargado y procesado exitosamente");
     } catch (error) {
       console.error("Error al cargar el archivo:", error);
-      alert("Error al cargar el archivo");
+      alert(`Error al cargar el archivo: ${error.message}`);
     }
   };
+  
 
   const handleDownload = () => {
     const link = document.createElement("a");

@@ -90,7 +90,7 @@ export default function DashboardNavbar() {
     if (!name) return 'NA';
     const [firstName, ...rest] = name.split(' ');
     const surname = rest.length > 0 ? rest[0] : '';
-    return `${firstName.charAt(0)}${surname.charAt(0)}`;
+    return `${firstName } ${surname}`;
   };
 
   const [imageError, setImageError] = useState(false);
@@ -102,7 +102,7 @@ export default function DashboardNavbar() {
           <BriefcaseIcon className="h-6 w-6 text-zinc-950 dark:text-zinc-100" />
         </Link>
         <nav className="hidden md:flex space-x-4">
-          {menuOptions.map((option, index) => (
+        {menuOptions.map((option, index) => (
             <Link
               key={index}
               className={`text-zinc-700 hover:text-zinc-950 font-medium dark:text-zinc-100 ${pathname === option.href ? 'border-b-2 border-primary' : ''}`}
