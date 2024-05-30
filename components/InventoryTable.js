@@ -39,7 +39,7 @@ const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
             {columnsToShow.includes('inventarioAdl') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">IADL</th>}
             {columnsToShow.includes('total') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">TOTAL</th>}
             {columnsToShow.includes('uMeasure') && <th className="w-1/12 px-1 sm:px-2 py-1 text-left">UM</th>}
-            {columnsToShow.includes('productPrice') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">PRECIO</th>}
+            {columnsToShow.includes('productPrice') && <th className="w-1/12 px-1 sm:px-6 py-1 text-right">PRECIO</th>}
             <th className="w-1/12 px-1 sm:px-2 py-1 text-right">VALOR</th>
           </tr>
         </thead>
