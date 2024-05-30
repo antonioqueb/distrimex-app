@@ -24,7 +24,7 @@ export default function Component() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <div className="bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden">
         <Table>
           <TableHeader>
             <TableRow>
@@ -38,10 +38,10 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="flex items-center gap-3">
-                  <FileIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                  <FileIcon className="w-6 h-6 text-zinc-500 dark:text-zinc-400" />
                   <div className="grid gap-0.5">
                     <p className="font-medium">report.pdf</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Uploaded on May 29, 2024</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Uploaded on May 29, 2024</p>
                   </div>
                 </div>
               </TableCell>
@@ -57,10 +57,10 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="flex items-center gap-3">
-                  <FileIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                  <FileIcon className="w-6 h-6 text-zinc-500 dark:text-zinc-400" />
                   <div className="grid gap-0.5">
                     <p className="font-medium">invoice.xlsx</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Uploaded on May 25, 2024</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Uploaded on May 25, 2024</p>
                   </div>
                 </div>
               </TableCell>
@@ -76,10 +76,10 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="flex items-center gap-3">
-                  <FileIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                  <FileIcon className="w-6 h-6 text-zinc-500 dark:text-zinc-400" />
                   <div className="grid gap-0.5">
                     <p className="font-medium">presentation.pptx</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Uploaded on May 20, 2024</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Uploaded on May 20, 2024</p>
                   </div>
                 </div>
               </TableCell>
@@ -95,10 +95,10 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="flex items-center gap-3">
-                  <FileIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                  <FileIcon className="w-6 h-6 text-zinc-500 dark:text-zinc-400" />
                   <div className="grid gap-0.5">
                     <p className="font-medium">image.jpg</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Uploaded on May 15, 2024</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Uploaded on May 15, 2024</p>
                   </div>
                 </div>
               </TableCell>

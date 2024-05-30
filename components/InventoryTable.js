@@ -21,35 +21,35 @@ const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
   }, [selectedValues]);
 
   return (
-    <div> 
-      <table className="w-full table-auto">
+    <div className="overflow-x-auto">
+      <table className="min-w-full table-fixed text-xs sm:text-sm">
         <thead>
-          <tr className="bg-primary/10 dark:bg-gray-800">
-            {columnsToShow.includes('adlCode') && <th className="px-8 py-3 text-left">CADL</th>}
-            {columnsToShow.includes('description') && <th className="px-4 py-3 text-left">DESCRIPCIÓN</th>}
-            {columnsToShow.includes('category') && <th className="px-2 py-3 text-left">CATEGORIA</th>}
-            {columnsToShow.includes('businessUnit') && <th className="px-2 py-3 text-left">U.N</th>}
-            {columnsToShow.includes('pcam') && <th className="px-4 py-3 text-right">PCAM</th>}
-            {columnsToShow.includes('lpz') && <th className="px-4 py-3 text-right">LPZ</th>}
-            {columnsToShow.includes('nac') && <th className="px-4 py-3 text-right">NAC</th>}
-            {columnsToShow.includes('uni') && <th className="px-4 py-3 text-right">UNI</th>}
-            {columnsToShow.includes('pnc') && <th className="px-4 py-3 text-right">PNC</th>}
-            {columnsToShow.includes('inventarioCampeche') && <th className="px-8 py-3 text-right">ICAMPECHE</th>}
-            {columnsToShow.includes('tol') && <th className="px-4 py-3 text-right">TOL</th>}
-            {columnsToShow.includes('inventarioAdl') && <th className="px-4 py-3 text-right">IADL</th>}
-            {columnsToShow.includes('total') && <th className="px-6 py-3 text-right">TOTAL</th>}
-            {columnsToShow.includes('uMeasure') && <th className="px-2 py-3 text-left">UM</th>}
-            {columnsToShow.includes('productPrice') && <th className="px-6 py-3 text-right">PRECIO</th>}
-            <th className="px-4 py-3 text-right">VALOR</th>
+          <tr className="bg-primary text-white">
+            {columnsToShow.includes('adlCode') && <th className="w-1/12 px-1 sm:px-2 py-1 text-left">CADL</th>}
+            {columnsToShow.includes('description') && <th className="w-2/12 px-1 sm:px-2 py-1 text-left">DESCRIPCIÓN</th>}
+            {columnsToShow.includes('category') && <th className="w-1/12 px-1 sm:px-2 py-1 text-left">CATEGORIA</th>}
+            {columnsToShow.includes('businessUnit') && <th className="w-1/12 px-1 sm:px-2 py-1 text-left">U.N</th>}
+            {columnsToShow.includes('pcam') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">PCAM</th>}
+            {columnsToShow.includes('lpz') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">LPZ</th>}
+            {columnsToShow.includes('nac') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">NAC</th>}
+            {columnsToShow.includes('uni') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">UNI</th>}
+            {columnsToShow.includes('pnc') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">PNC</th>}
+            {columnsToShow.includes('inventarioCampeche') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">ICAMPECHE</th>}
+            {columnsToShow.includes('tol') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">TOL</th>}
+            {columnsToShow.includes('inventarioAdl') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">IADL</th>}
+            {columnsToShow.includes('total') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">TOTAL</th>}
+            {columnsToShow.includes('uMeasure') && <th className="w-1/12 px-1 sm:px-2 py-1 text-left">UM</th>}
+            {columnsToShow.includes('productPrice') && <th className="w-1/12 px-1 sm:px-2 py-1 text-right">PRECIO</th>}
+            <th className="w-1/12 px-1 sm:px-2 py-1 text-right">VALOR</th>
           </tr>
         </thead>
         <tbody>
           {paginatedData.map((item, index) => (
             <CollapsibleTableRow key={index} item={item} columnsToShow={columnsToShow} />
           ))}
-          <tr className="bg-primary/10 dark:bg-gray-800">
-            <td colSpan={columnsToShow.length} className="px-4 py-3 text-right font-bold">Total:</td>
-            <td className="px-4 py-3 text-right font-bold">
+          <tr className="bg-primary text-white">
+            <td colSpan={columnsToShow.length} className="px-1 sm:px-4 py-3 text-right font-bold">Total:</td>
+            <td className="py-3 text-right font-extrabold pr-1 sm:pr-4 text-lg">
               ${totalValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </td>
           </tr>
@@ -59,7 +59,7 @@ const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
         <button
           onClick={() => handleChangePage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-4 py-2 mx-1 bg-gray-300 disabled:bg-gray-200 dark:bg-gray-800"
+          className="px-2 sm:px-4 py-2 mx-1 bg-zinc-300 disabled:bg-zinc-200 dark:bg-zinc-800"
         >
           Anterior
         </button>
@@ -67,7 +67,7 @@ const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
           <button
             key={index}
             onClick={() => handleChangePage(index + 1)}
-            className={`px-4 py-2 mx-1 ${currentPage === index + 1 ? 'bg-primary text-white' : 'bg-zinc-200 dark:bg-zinc-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200'}`}
+            className={`px-2 sm:px-4 py-2 mx-1 ${currentPage === index + 1 ? 'bg-primary text-white' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-300 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-200'}`}
           >
             {index + 1}
           </button>
@@ -75,7 +75,7 @@ const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
         <button
           onClick={() => handleChangePage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 mx-1 bg-gray-300 disabled:bg-gray-200 dark:bg-gray-800"
+          className="px-2 sm:px-4 py-2 mx-1 bg-zinc-300 disabled:bg-zinc-200 dark:bg-zinc-800"
         >
           Siguiente
         </button>

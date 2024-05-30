@@ -90,7 +90,7 @@ export default function InventoryPage() {
   if (isError) return <div>Error al cargar los datos</div>;
 
   return (
-    <div className="mx-auto px-4 py-8">
+    <div className="mx-auto px-4 py-8 ">
       <h1 className="text-2xl font-bold mb-6">Inventario</h1>
       <div className="mb-4 flex space-x-4">
         <GroupByDropdown groupByKey={groupByKey} setGroupByKey={setGroupByKey} />
@@ -100,7 +100,7 @@ export default function InventoryPage() {
           placeholder="Buscar..."
           value={searchTerm}
           onChange={handleSearchChange}
-          className="border border-gray-300 rounded px-4 py-2"
+          className="border border-zinc-300 rounded px-4 py-2"
         />
       </div>
       <FilterIndicators selectedValues={selectedValues} clearSelectedValue={clearSelectedValue} />

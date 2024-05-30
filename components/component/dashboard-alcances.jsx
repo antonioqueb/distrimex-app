@@ -10,7 +10,7 @@ export default function Component() {
       <div className="overflow-x-auto">
         <table className="w-full table-auto">
           <thead>
-            <tr className="bg-gray-200 dark:bg-gray-800">
+            <tr className="bg-zinc-200 dark:bg-zinc-800">
               <th className="px-4 py-3 text-left">Producto</th>
               <th className="px-4 py-3 text-left">Unidad de Medida</th>
               <th className="px-4 py-3 text-right">Cantidad</th>
@@ -19,35 +19,35 @@ export default function Component() {
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-gray-200 dark:border-gray-800">
+            <tr className="border-b border-zinc-200 dark:border-zinc-800">
               <td className="px-4 py-3">Producto A</td>
               <td className="px-4 py-3">Unidad</td>
               <td className="px-4 py-3 text-right">50</td>
               <td className="px-4 py-3 text-right">2.5</td>
               <td className="px-4 py-3 text-right">2.5</td>
             </tr>
-            <tr className="border-b border-gray-200 dark:border-gray-800">
+            <tr className="border-b border-zinc-200 dark:border-zinc-800">
               <td className="px-4 py-3">Producto B</td>
               <td className="px-4 py-3">Caja</td>
               <td className="px-4 py-3 text-right">20</td>
               <td className="px-4 py-3 text-right">1.0</td>
               <td className="px-4 py-3 text-right">1.0</td>
             </tr>
-            <tr className="border-b border-gray-200 dark:border-gray-800">
+            <tr className="border-b border-zinc-200 dark:border-zinc-800">
               <td className="px-4 py-3">Producto C</td>
               <td className="px-4 py-3">Bolsa</td>
               <td className="px-4 py-3 text-right">100</td>
               <td className="px-4 py-3 text-right">5.0</td>
               <td className="px-4 py-3 text-right">5.0</td>
             </tr>
-            <tr className="border-b border-gray-200 dark:border-gray-800">
+            <tr className="border-b border-zinc-200 dark:border-zinc-800">
               <td className="px-4 py-3">Producto D</td>
               <td className="px-4 py-3">Litro</td>
               <td className="px-4 py-3 text-right">30</td>
               <td className="px-4 py-3 text-right">1.5</td>
               <td className="px-4 py-3 text-right">1.5</td>
             </tr>
-            <tr className="border-b border-gray-200 dark:border-gray-800">
+            <tr className="border-b border-zinc-200 dark:border-zinc-800">
               <td className="px-4 py-3">Producto E</td>
               <td className="px-4 py-3">Metro</td>
               <td className="px-4 py-3 text-right">25</td>

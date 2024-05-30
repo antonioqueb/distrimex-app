@@ -51,17 +51,17 @@ export default function Page() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+    <div className="bg-white dark:bg-zinc-950 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
       <div className="space-y-6">
         <div className="text-center">
           <h1 className="text-2xl font-bold">Cargar archivo de Excel</h1>
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-zinc-500 dark:text-zinc-400">
             Sube tus archivos de Excel para Distrimex
           </p>
         </div>
-        <div className="border-2 border-gray-200 dark:border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center space-y-4">
-          <CloudUploadIcon className="w-12 h-12 text-gray-500 dark:text-gray-400" />
-          <p className="text-gray-500 dark:text-gray-400">
+        <div className="border-2 border-zinc-200 dark:border-zinc-800 rounded-lg p-6 flex flex-col items-center justify-center space-y-4">
+          <CloudUploadIcon className="w-12 h-12 text-zinc-500 dark:text-zinc-400" />
+          <p className="text-zinc-500 dark:text-zinc-400">
             Arrastra y suelta tus archivos aquí o
           </p>
           <input type="file" onChange={handleFileChange} className="hidden" id="file-input" />
@@ -70,7 +70,7 @@ export default function Page() {
         <div className="space-y-4">
           <h2 className="text-lg font-bold">Archivos seleccionados</h2>
           {file && (
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center gap-4">
+            <div className="bg-zinc-100 dark:bg-zinc-800 rounded-lg p-4 flex items-center gap-4">
               <img
                 alt="Excel file"
                 className="rounded"
@@ -84,7 +84,7 @@ export default function Page() {
               />
               <div>
                 <p className="font-medium">{file.name}</p>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                <p className="text-zinc-500 dark:text-zinc-400 text-sm">
                   {(file.size / (1024 * 1024)).toFixed(2)} MB
                 </p>
               </div>
