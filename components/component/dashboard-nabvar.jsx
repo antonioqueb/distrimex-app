@@ -32,9 +32,9 @@ export default function DashboardNavbar() {
     if (pathname.startsWith('/dashboard/empleados')) {
       setMenuOptions([
         { label: 'Resumen', href: '/dashboard/empleados'},
-        { label: 'Administrar', href: '/dashboard/empleados/administrar' },
-        { label: 'Listar', href: '/dashboard/empleados/lista' },
-        { label: 'Historial', href: '/dashboard/empleados/historial' },
+        // { label: 'Administrar', href: '/dashboard/empleados/administrar' },
+        // { label: 'Listar', href: '/dashboard/empleados/lista' },
+        // { label: 'Historial', href: '/dashboard/empleados/historial' },
       ]);
     } else if (pathname.startsWith('/dashboard/ajustes')) {
       setMenuOptions([
@@ -47,7 +47,18 @@ export default function DashboardNavbar() {
         // { label: 'Buscar', href: '/dashboard/menciones/buscar' },
         // { label: 'Informes', href: '/dashboard/menciones/informes' },
       ]);
-    } else if (pathname.startsWith('/dashboard/notificaciones')) {
+
+    } else if (pathname.startsWith('/dashboard/carga')) {
+      setMenuOptions([
+        { label: 'Carga', href: '/dashboard/carga' }
+        // { label: 'Informes', href: '/dashboard/menciones/informes' },
+      ]);
+
+    } 
+
+    
+    
+    else if (pathname.startsWith('/dashboard/notificaciones')) {
       setMenuOptions([
         { label: 'Ajustes', href: '/dashboard/notificaciones' },
         // { label: 'Categoría', href: '/dashboard/notificaciones/categorias' },
@@ -60,7 +71,7 @@ export default function DashboardNavbar() {
     } else if (pathname.startsWith('/dashboard')) {
       setMenuOptions([
         { label: 'Resumen', href: '/dashboard' },
-        { label: 'Análisis de Datos', href: '/dashboard/analisis' },
+        // { label: 'Análisis de Datos', href: '/dashboard/analisis' },
       ]);
     } else {
       setMenuOptions([
@@ -103,10 +114,10 @@ export default function DashboardNavbar() {
         </nav>
       </div>
       <div className="flex items-center gap-4">
-        <Button className="mr-4 dark:bg-zinc-950" variant="outline">
+        {/* <Button className="mr-4 dark:bg-zinc-950" variant="outline">
           <CrownIcon className="h-4 w-4 mr-2 " />
           Cuenta Premium
-        </Button>
+        </Button> */}
         <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

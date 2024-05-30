@@ -103,7 +103,7 @@ export default function DashboardEmployedHistory() {
   return (
     <div className="w-full mx-auto px-4 md:px-6 py-12">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">Historial Laboral de Empleados</h1>
+        <h1 className="text-2xl font-bold">Distrimex de Empleados</h1>
         <div className="flex items-center gap-4">
           <div className="relative w-full max-w-md">
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 dark:text-zinc-400 w-5 h-5" />
@@ -179,7 +179,7 @@ export default function DashboardEmployedHistory() {
               </div>
             </div>
             <div className="bg-zinc-100 dark:bg-zinc-700 p-4">
-              <h4 className="text-base font-semibold mb-2">Historial Laboral</h4>
+              <h4 className="text-base font-semibold mb-2">Distrimex</h4>
               <ul className="space-y-2">
                 {employee.history.map((job, jobIndex) => (
                   <li key={jobIndex} className="text-sm text-zinc-500 dark:text-zinc-400">

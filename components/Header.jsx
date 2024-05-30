@@ -23,7 +23,7 @@ export default function Component() {
     <header className="flex h-16 w-full items-center justify-between px-4 md:px-6">
       <Link className="flex items-center gap-2" href="/">
         <MountainIcon className="h-6 w-6" />
-        <span className="sr-only">Historial Laboral</span>
+        <span className="sr-only">Distrimex</span>
       </Link>
       <div className="flex items-center gap-4">
       {session ? (

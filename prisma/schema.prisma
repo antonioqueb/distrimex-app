@@ -80,19 +80,25 @@ model Authenticator {
   @@id([userId, credentialID])
 }
 
-// model Contact {
-//   id        Int      @id @default(autoincrement())
-//   name      String
-//   email     String
-//   message   String
-//   createdAt DateTime @default(now())
-// }
+model Inventory {
+  id                    String   @id @default(cuid())
+  adlCode               String   @unique
+  description           String
+  odooCode              String
+  category              String
+  businessUnit          String
+  pcam                  Float
+  lpz                   Float
+  nac                   Float
+  uni                   Float
+  pnc                   Float
+  inventarioCampeche    Float
+  tol                   Float
+  inventarioAdl         Float
+  uMeasure              String
+  productPrice          Float
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
 
-// model BudgetRequest {
-//   id          Int      @id @default(autoincrement())
-//   email       String
-//   phone       String
-//   projectType String
-//   description String
-//   createdAt   DateTime @default(now())
-// }
+  @@index([adlCode])
+}
