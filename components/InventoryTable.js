@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import CollapsibleTableRow from "@/components/CollapsibleTableRow";
 
-const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
+const InventoryTable = ({ filteredData, selectedValues }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 8;
 
@@ -19,6 +19,10 @@ const InventoryTable = ({ filteredData, totalValue, selectedValues }) => {
     }
     return ['adlCode', 'description', 'category', 'businessUnit', 'pcam', 'lpz', 'nac', 'uni', 'pnc', 'inventarioCampeche', 'tol', 'inventarioAdl', 'total', 'uMeasure', 'productPrice'];
   }, [selectedValues]);
+
+  const totalValue = useMemo(() => {
+    return filteredData.reduce((acc, item) => acc + item.value, 0);
+  }, [filteredData]);
 
   return (
     <div className="overflow-x-auto">
