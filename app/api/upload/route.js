@@ -4,10 +4,9 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
+export const runtime = 'nodejs'; // Nueva configuración   // Nueva configuración
+export const api = {
+  bodyParser: false,
 };
 
 export async function POST(request) {
@@ -29,7 +28,7 @@ export async function POST(request) {
     const workbook = new ExcelJS.Workbook();
     await workbook.xlsx.load(buffer);
 
-    const worksheet = workbook.getWorksheet(1); // Asumiendo que estás usando la primera hoja
+    const worksheet = workbook.getWorksheet(1); // Asumiendo que estás usando la primera hoja...
 
     const data = [];
     worksheet.eachRow((row, rowNumber) => {
