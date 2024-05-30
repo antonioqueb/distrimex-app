@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { AvatarImage, AvatarFallback, Avatar } from '@/components/ui/avatar';
 import { DropdownMenuTrigger, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuContent, DropdownMenu } from '@/components/ui/dropdown-menu';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
