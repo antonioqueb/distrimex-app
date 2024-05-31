@@ -1,5 +1,5 @@
 'use client'
-
+// components\FilterIndicators.js
 import { GiCancel } from "react-icons/gi";
 
 

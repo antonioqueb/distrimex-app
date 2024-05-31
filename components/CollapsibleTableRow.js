@@ -17,18 +17,18 @@ const CollapsibleTableRow = ({ item, columnsToShow }) => {
         {columnsToShow.includes('description') && <td className="px-4 py-3">{description}</td>}
         {columnsToShow.includes('category') && <td className="px-4 py-3">{category}</td>}
         {columnsToShow.includes('businessUnit') && <td className="px-4 py-3">{businessUnit}</td>}
-        {columnsToShow.includes('pcam') && <td className="px-4 py-3 text-right">{pcam.toFixed(2)}</td>}
-        {columnsToShow.includes('lpz') && <td className="px-4 py-3 text-right">{lpz.toFixed(2)}</td>}
-        {columnsToShow.includes('nac') && <td className="px-4 py-3 text-right">{nac.toFixed(2)}</td>}
-        {columnsToShow.includes('uni') && <td className="px-4 py-3 text-right">{uni.toFixed(2)}</td>}
-        {columnsToShow.includes('pnc') && <td className="px-4 py-3 text-right">{pnc.toFixed(2)}</td>}
-        {columnsToShow.includes('inventarioCampeche') && <td className="px-4 py-3 text-right">{inventarioCampeche.toFixed(2)}</td>}
-        {columnsToShow.includes('tol') && <td className="px-4 py-3 text-right">{tol.toFixed(2)}</td>}
-        {columnsToShow.includes('inventarioAdl') && <td className="px-4 py-3 text-right">{inventarioAdl.toFixed(2)}</td>}
-        {columnsToShow.includes('total') && <td className="px-4 py-3 text-right">{total.toFixed(2)}</td>}
+        {columnsToShow.includes('pcam') && <td className="px-4 py-3 text-right">{pcam.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('lpz') && <td className="px-4 py-3 text-right">{lpz.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('nac') && <td className="px-4 py-3 text-right">{nac.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('uni') && <td className="px-4 py-3 text-right">{uni.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('pnc') && <td className="px-4 py-3 text-right">{pnc.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('inventarioCampeche') && <td className="px-4 py-3 text-right">{inventarioCampeche.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('tol') && <td className="px-4 py-3 text-right">{tol.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('inventarioAdl') && <td className="px-4 py-3 text-right">{inventarioAdl.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        {columnsToShow.includes('total') && <td className="px-4 py-3 text-right">{total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
         {columnsToShow.includes('uMeasure') && <td className="px-4 py-3">{uMeasure}</td>}
-        {columnsToShow.includes('productPrice') && <td className="px-4 py-3 text-right">$ {productPrice}</td>}
-        <td className="px-4 py-3 text-right">$ {valor.toFixed(2)}</td>
+        {columnsToShow.includes('productPrice') && <td className="px-4 py-3 text-right">$ {productPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>}
+        <td className="px-4 py-3 text-right">$ {valor.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}</td>
       </tr>
       {isExpanded && (
         <tr>
