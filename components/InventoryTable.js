@@ -77,12 +77,12 @@ const InventoryTable = ({ filteredData, selectedValues }) => {
             <th className="w-1/12 px-1 sm:px-2 py-1 text-right">VALOR</th>
           </tr>
         </thead>
-        <tbody className='border border-black'>
+        <tbody className=''>
           {paginatedData.map((item, index) => (
             // Renderizar filas colapsables con los datos paginados
             <CollapsibleTableRow key={index} item={{...item, total: getTotalForRow(item)}} columnsToShow={columnsToShow} />
           ))}
-         <tr className="bg-primary text-white w-full border border-black">
+         <tr className="bg-primary text-white w-full ">
             <td colSpan={columnsToShow.length} className="px-1 sm:px-4 py-3 text-right font-bold">Total Acumulado:</td>
             <td className="py-3 text-right font-extrabold sm:pr-4 text-lg bg-primary">
               ${totalValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}
