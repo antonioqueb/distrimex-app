@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu";
@@ -27,7 +25,7 @@ const FilterDropdown = ({ options, selectedValues, handleSelect }) => {
           Filtrar
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-85 p-2">
+      <DropdownMenuContent className="w-85 p-2 max-h-60 overflow-y-auto">
         <DropdownMenuLabel>Filtrar por:</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {options.map(option => (
@@ -42,7 +40,7 @@ const FilterDropdown = ({ options, selectedValues, handleSelect }) => {
               readOnly
               className="pointer-events-none"
             />
-            <Label className="flex-1 cursor-pointer pointer-events-none" htmlFor={`filter-${option}`}>
+            <Label className="flex-1 cursor-pointer pointer-events-none " htmlFor={`filter-${option}`}>
               {option}
             </Label>
           </DropdownMenuItem>
