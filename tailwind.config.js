@@ -20,6 +20,15 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        reflection: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
+      animation: {
+        reflection: 'reflection 0.5s infinite linear',
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },

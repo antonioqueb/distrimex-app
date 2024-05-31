@@ -3,16 +3,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import {
-  SelectValue,
-  SelectTrigger,
-  SelectItem,
-  SelectContent,
-  Select,
-} from "@/components/ui/select";
+import { Progress } from "@/components/ui/progress";
 
 export default function Page() {
   const [file, setFile] = useState(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [isUploading, setIsUploading] = useState(false);
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -23,29 +19,36 @@ export default function Page() {
       alert("Por favor, selecciona un archivo primero");
       return;
     }
-  
+
     const formData = new FormData();
     formData.append("file", file);
-  
+
     try {
+      setIsUploading(true);
       const response = await fetch("/api/upload", {
         method: "POST",
         body: formData,
+        onUploadProgress: (progressEvent) => {
+          const { loaded, total } = progressEvent;
+          const percentCompleted = Math.round((loaded * 100) / total);
+          setUploadProgress(percentCompleted);
+        },
       });
-  
+
       if (!response.ok) {
         throw new Error(`Error en la respuesta del servidor: ${response.statusText}`);
       }
-  
+
       const result = await response.json();
       console.log(result);
       alert("Archivo cargado y procesado exitosamente");
     } catch (error) {
       console.error("Error al cargar el archivo:", error);
       alert(`Error al cargar el archivo: ${error.message}`);
+    } finally {
+      setIsUploading(false);
     }
   };
-  
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -97,6 +100,15 @@ export default function Page() {
             </div>
           )}
         </div>
+        {isUploading && (
+          <div className="space-y-4">
+            <Label>Progreso de la carga:</Label>
+            <div className="relative">
+              <Progress value={uploadProgress} max="100" className="relative overflow-hidden" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-reflection"></div>
+            </div>
+          </div>
+        )}
         <Button className="w-full" onClick={handleUpload}>Cargar</Button>
         <Button className="w-full mt-4" variant="outline" onClick={handleDownload}>
           Descargar Plantilla
